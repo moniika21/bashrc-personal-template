@@ -65,11 +65,15 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     if [[ $(id -u) != 0 ]];then
+        # For user
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
         #PS1="\[$Purple\][\t]\[\e[m\] ${debian_chroot:+($debian_chroot)}\[$Green\]\u@\[\e[m\]\[$Red\]\H\[\e[m\]:\[$BBlue\]\w\[\e[m\]\$ "
+        #PS1="\[\e[0;36m\][\t]\[\e[0;m\] \[\e[0;32m\]\u@\h\[\e[0;m\]:\[\e[1;35m\]\w\[\e[0;m\]\[\e[1;32m\]\\$\[\e[0;m\] "
     else
+        # For root
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\# '
         #PS1="\[$Purple\][\t]\[\e[m\] ${debian_chroot:+($debian_chroot)}\[$Blue\]\u@\[\e[m\]\[$Red\]\H\[\e[m\]:\[$BBlue\]\w\[\e[m\]# "
+        #PS1="\[\e[0;36m\][\t]\[\e[0;m\] \[\e[0;31m\]\u@\h\[\e[0;m\]:\[\e[1;35m\]\w\[\e[0;m\]\[\e[1;31m\]#\[\e[0;m\] "
     fi
 fi
 unset color_prompt force_color_prompt
@@ -97,6 +101,9 @@ fi
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# custom colored grep matches
+export GREP_COLORS='ms=01;31'
 
 # Some more aliases
 alias ll='ls -l'
@@ -133,6 +140,7 @@ fi
 export EDITOR=vim
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 alias dl="sudo apt -qq update && echo 'n' | sudo apt upgrade 2>/dev/null | sed -n '/^Need to get/p'"
+alias maj="sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove"
 alias c='clear'
 alias s='cd ..'
 alias findlogs='find /var/log/ -type f \! -regex "^.*\.\([0-9]\|gz\|dat\)" | xargs tail -n0 -f'
