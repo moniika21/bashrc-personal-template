@@ -125,7 +125,3 @@ chpwd_functions=(${chpwd_functions[@]} "nvm_autouse")
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# My aliases and exports
-alias dl="sudo apt -qq update && echo 'n' | sudo apt upgrade 2>/dev/null | sed -n '/^Need to get/p'"
-alias maj="sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove"
