@@ -1,7 +1,18 @@
 # $ZSH/.oh-my-zsh/custom/custom-aliases.zsh
 
 # My aliases and exports
-alias dl="sudo apt -qq update && echo 'n' | sudo apt upgrade 2>/dev/null | sed -n '/^Need to get/p'"
-alias maj="sudo apt -y update && sudo apt -y full-upgrade"
-alias s="cd .."
-alias findlogs="find /var/log/ -type f \! -regex '^.*\.\([0-9]\|gz\|dat\)' | xargs tail -n0 -f"
+if [ -x "$(command -v nala)" ]
+then
+    alias install="sudo nala install"
+    alias update="sudo nala update"
+    alias upgrade="sudo nala upgrade"
+    alias autoremove="sudo nala autoremove"
+    alias maj="update && upgrade -y && autoremove -y"
+else
+    alias dl="sudo apt -qq update && echo 'n' | sudo apt upgrade 2>/dev/null | sed -n '/^Need to get/p'"
+    alias install="sudo apt install"
+    alias update="sudo apt update"
+    alias upgrade="sudo apt upgrade"
+    alias autoremove="sudo apt autoremove"
+    alias maj="update -y && upgrade -y && autoremove -y"
+fi
