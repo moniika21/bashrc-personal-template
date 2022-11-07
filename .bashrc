@@ -8,7 +8,7 @@ export LANGUAGE=fr
 export TERM=xterm-256color
 
 # To add color variables
-. ~/.colors
+source ~/.colors
 
 # If not running interactively (if there is no "i" flag in the bash configuration flags), don't do anything
 [[ $- == *i* ]] || return
@@ -139,9 +139,7 @@ fi
 
 # My aliases and exports
 export EDITOR=vim
-export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
-alias dl="sudo apt -qq update && echo 'n' | sudo apt upgrade 2>/dev/null | sed -n '/^Need to get/p'"
-alias maj="sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove"
-alias c='clear'
-alias s='cd ..'
-alias findlogs='find /var/log/ -type f \! -regex "^.*\.\([0-9]\|gz\|dat\)" | xargs tail -n0 -f'
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S"
+
+# Charge custom aliases
+source ~/.custom-aliases
