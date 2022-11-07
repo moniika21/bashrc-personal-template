@@ -122,8 +122,8 @@ alias mv='mv -i'
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/custom-aliases.zsh ]; then
-    . ~/custom-aliases.zsh
+if [ -f ~/custom-aliases ]; then
+    source ~/custom-aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -140,6 +140,3 @@ fi
 # My aliases and exports
 export EDITOR=vim
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S"
-
-# Charge custom aliases
-source ~/.custom-aliases
