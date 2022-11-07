@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# ~/.colors
+
 # Styles
 OFF="\e[0m" # Text Reset
 BOLD="\e[1m"

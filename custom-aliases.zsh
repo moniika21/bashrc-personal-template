@@ -1,4 +1,4 @@
-# $ZSH/.oh-my-zsh/custom/custom-aliases.zsh
+# ~/.oh-my-zsh/custom/custom-aliases.zsh
 
 # My aliases and exports
 if [ -x "$(command -v nala)" ] # Nala installed
