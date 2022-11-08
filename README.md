@@ -31,3 +31,7 @@ For zsh, there is a section about nvm autouse:
 - It run `nvm use` automatically every time there's
 a `.nvmrc` file in the directory. Also, revert to default
 version when entering a directory without `.nvmrc`.
+
+## Languages
+https://www.baeldung.com/linux/locale-environment-variables
+To `en_US`
