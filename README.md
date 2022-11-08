@@ -19,7 +19,7 @@ It is only implemented at the moment for debian-based ditributions with use of [
 
 #### [Oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - If you have it installed, you have to put `custom-aliases.zsh` into the `$HOME/.oh-my-zsh/custom` folder.
-- If not, you can copy/paste the code into `.zshrc/.bashrc` file or use a separate file.
+- If not, you can copy/paste the code into `.zshrc` file or use a separate file.
 
 ### Bash
 - You can rename the file into `.custom-aliases`, it is already charged in `.bashrc` file.
