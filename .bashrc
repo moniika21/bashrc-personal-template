@@ -3,8 +3,8 @@
 # for examples
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-export LANGUAGE=en_US
-export LC_ALL=en_US.UTF-8
+export LANGUAGE=C
+export LC_ALL=C.UTF-8
 export TERM=xterm-256color
 
 # To add color variables

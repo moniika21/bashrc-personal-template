@@ -41,5 +41,36 @@ version when entering a directory without `.nvmrc`.
 
 ## Languages
 
-<https://www.baeldung.com/linux/locale-environment-variables>
-To `en_US`
+For languages there is `LANGUAGE` and `LC_ALL` environment variables to specify the language to be used widely on the system.
+
+No need to have `LANG` [set](https://wiki.debian.org/Locale#line-35), the display language will be by default [other locale related environment variables](https://wiki.debian.org/Locale#Configuration).
+
+Priority of these variables:
+
+1. `LANGUAGE`
+   - it can have one or more language values and is responsible for the order of the languages in which the messages will be displayed.
+2. `LC_ALL`
+   - it is the strongest locale environment variable, except for LANGUAGE
+
+3. `LC_xxx`
+4. `LANG`
+
+The `C` and `C.UTF-8` value is for default language who are usually `en_US` and `en_US.UTF-8`
+
+You can run [locale](https://manpages.debian.org/stable/manpages/locale.1.en.html) to list what locales currently defined for the current user account.
+
+If you have problem with a locale then generate the missing locale with `locale-gen` and reconfigure locales to take notice.
+
+[locale-gen](https://manpages.debian.org/stable/locales/locale-gen.8.en.html) is a program that reads the file `/etc/locale.gen` and invokes [localedef](https://manpages.debian.org/stable/manpages/localedef.1.en.html) for the chosen localisation profiles.
+
+```bash
+$ sudo locale-gen "en_US.UTF-8"
+Generating locales...
+  en_US.UTF-8... done
+Generation complete.
+
+$ sudo dpkg-reconfigure locales
+Generating locales...
+  en_US.UTF-8... up-to-date
+Generation complete.
+```

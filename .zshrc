@@ -81,8 +81,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANGUAGE=en_US
-export LC_ALL=en_US.UTF-8
+export LANGUAGE=C
+export LC_ALL=C.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
