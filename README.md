@@ -3,7 +3,7 @@
 ## Colors aliases
 
 You can use the `.colors` file to have a bunch of aliases for colors.  
-These aliases use the `24-bit` or `true color` escape sequences.
+These aliases use the **24-bit** or **true color** escape sequences.
 
 This naming convention follow this rule:
 
