@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 # ~/.colors
+
+set -euo pipefail
 
 # Styles
 OFF="\e[0m" # Text Reset

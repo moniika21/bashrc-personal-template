@@ -1,5 +1,7 @@
 # ~/.oh-my-zsh/custom/custom-aliases.zsh
 
+set -euo pipefail
+
 # My aliases and exports
 if [ -x "$(command -v nala)" ] # Nala installed
 then
