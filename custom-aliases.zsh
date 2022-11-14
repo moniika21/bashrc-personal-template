@@ -18,3 +18,5 @@ else
     alias autoremove="sudo apt autoremove"
     alias maj="update -y && upgrade -y && autoremove -y"
 fi
+
+alias datef=`date +"%a %b %d %Y, %I:%M:%S %p"`
