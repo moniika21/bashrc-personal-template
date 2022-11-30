@@ -2,6 +2,7 @@
 
 # ~/.colors
 
+# shellcheck disable=SC2034
 set -euo pipefail
 
 # Styles
