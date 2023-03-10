@@ -1,6 +1,6 @@
 # ~/.oh-my-zsh/custom/custom-aliases.zsh
 
-set -euo pipefail
+# No "set -euo pipefail" here to not softlock the system if zsh have an error while loading this script
 
 # My aliases and exports
 if [ -x "$(command -v nala)" ] # Nala installed
