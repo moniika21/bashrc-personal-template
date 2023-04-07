@@ -19,4 +19,4 @@ else
     alias maj="update -y && upgrade -y && autoremove -y"
 fi
 
-alias datef=`date +"%a %b %d %Y, %I:%M:%S %p"`
+alias datef="date +'%a %b %d %Y, %I:%M:%S %p'"
