@@ -141,4 +141,4 @@ export EDITOR=vim
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S"
 
 # iTerm2: set current directory as a custom escape sequence for tabby
-export PS1="$PS1\[\e]1337;CurrentDir="'$(pwd)\a\]' 
+export PS1="$PS1\[\e]1337;CurrentDir="'$(pwd)\a\]'
