@@ -1,4 +1,6 @@
 # Template for bash and zsh
+## Prompt for root
+`PS1='${debian_chroot:+($debian_chroot)}\[\e[01;34m\]\u\[\e[00m\]@\[\e[01;31m\]\h\[\e[00m\]:\[\e[01;33m\]\w\[\e[00m\]\$ '`
 
 ## Colors aliases
 
