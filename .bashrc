@@ -142,3 +142,12 @@ export HISTTIMEFORMAT="%h/%d - %H:%M:%S"
 
 # iTerm2: set current directory as a custom escape sequence for tabby
 export PS1="$PS1\[\e]1337;CurrentDir="'$(pwd)\a\]'
+
+# Mise à jour complète avec autoremove
+alias full-maj='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
+
+# Mise à jour complète sans autoremove
+alias maj='sudo apt update && sudo apt full-upgrade'
+
+# Démarre le keychain agent pour les clés ssh
+eval $(keychain --eval id_rsa)
