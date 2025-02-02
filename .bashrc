@@ -149,5 +149,5 @@ alias full-maj='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 # Mise à jour complète sans autoremove
 alias maj='sudo apt update && sudo apt full-upgrade'
 
-# Démarre le keychain agent pour les clés ssh
-eval $(keychain --eval id_rsa)
+# Démarre le keychain agent pour la clé leonidas_ed25519
+eval $(keychain --eval leonidas_ed25519)
