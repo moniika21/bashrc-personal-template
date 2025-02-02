@@ -150,4 +150,4 @@ alias full-maj='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias maj='sudo apt update && sudo apt full-upgrade'
 
 # Démarre le keychain agent pour la clé leonidas_ed25519
-eval $(keychain --eval leonidas_ed25519)
+eval $(keychain --quiet --eval leonidas_ed25519)
