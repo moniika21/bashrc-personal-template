@@ -8,7 +8,7 @@ export LC_ALL=C.UTF-8
 export TERM=xterm-256color
 
 # To add color variables
-source ~/.colors
+#source ~/.colors
 
 # If not running interactively (if there is no "i" flag in the bash configuration flags), don't do anything
 [[ $- == *i* ]] || return
